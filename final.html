@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>世界風景探索</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Noto Sans TC", sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #2c7be5;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #ffffff;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav select {
+            padding: 8px 12px;
+            font-size: 16px;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 26px;
+        }
+
+        /* 圖片輪播 */
+        .carousel {
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .slides {
+            display: flex;
+            width: 300%;
+            animation: slide 12s infinite;
+        }
+
+        .slides img {
+            width: 100%;
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            33% { transform: translateX(-100%); }
+            66% { transform: translateX(-200%); }
+            100% { transform: translateX(0); }
+        }
+
+        .info {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #ffffff;
+            width: 280px;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header id="top">
+    <h1>世界風景探索</h1>
+    <p>一起看看世界的美景</p>
+</header>
+
+<nav>
+    <label for="quicklink">快速前往：</label>
+    <select id="quicklink" onchange="location = this.value;">
+        <option value="#top">頁首</option>
+        <option value="#gallery">圖片</option>
+        <option value="#about">介紹</option>
+        <option value="#feature">特色</option>
+        <option value="#footer">頁尾</option>
+    </select>
+</nav>
+
+<section id="gallery">
+    <h2>風景圖片</h2>
+    <div class="carousel">
+        <div class="slides">
+            <img src="https://picsum.photos/800/400?random=1" alt="風景圖片">
+            <img src="https://picsum.photos/800/400?random=2" alt="風景圖片">
+            <img src="https://picsum.photos/800/400?random=3" alt="風景圖片">
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <h2>網站介紹</h2>
+    <div class="info">
+        <p>
+            這個網站收集了不同地方的風景圖片。<br>
+            希望透過這些畫面，帶你看看世界的樣子。<br>
+            放慢你的腳步，也是一種享受。
+        </p>
+    </div>
+</section>
+
+<section id="feature">
+    <h2>網站特色</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>自然風景</h3>
+            <p>山、海。</p>
+        </div>
+        <div class="card">
+            <h3>城市畫面</h3>
+            <p>城市中的日常風景。</p>
+        </div>
+        <div class="card">
+            <h3>輕鬆瀏覽</h3>
+            <p>簡單設計，輕鬆觀看。</p>
+        </div>
+    </div>
+</section>
+
+<footer id="footer">
+    <p>
+        © 2025 世界風景探索<br>
+        謝謝你的瀏覽
+    </p>
+</footer>
+
+</body>
+</html>
